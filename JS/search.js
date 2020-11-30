@@ -36,7 +36,7 @@ const searchMovies = async () => {
     document.getElementsByClassName('list-cards')[0].innerHTML = html;
 }
 const getMovie = (textSearch) => {
-    const url = `${URL_PATH}/3/search/movie?api_key=${API_KEY}&language=es-ES&query=${textSearch}&page=1&include_adult=true`;
+    const url = `${URL_PATH}/3/search/movie?api_key=${API_KEY}&language=es-ES&query=${textSearch}&page=1&include_adult=false`;
     return fetch(url)
             .then(response => response.json())
             .then(result => result.results)
